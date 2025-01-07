@@ -1,1 +1,1 @@
-declare module "host/*";
+declare module 'host/*';
