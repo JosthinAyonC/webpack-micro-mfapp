@@ -8,8 +8,6 @@ const Main: React.FC = () => {
     <div className="mt-10 text-3xl mx-auto max-w-6xl">
       <div>Name: hosts</div>
       <div>Framework: react</div>
-      <div>Language: TypeScripst</div>
-      <div>CSS: Tailwind</div>
       <MicroTestPage />
       <ThemeToggle />
     </div>
