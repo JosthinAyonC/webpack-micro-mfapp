@@ -82,7 +82,7 @@ module.exports = (_, argv) => {
         remotes: {
         },
         exposes: {
-          "./MicroTestPage": "./src/pages/MicroTestPage",
+          "./MicroTestPage": "./src/app/pages/MicroTestPage",
         },
         shared: {
           ...deps,
