@@ -1,24 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import { DialogProvider } from '~/provider/DialogContext';
-import { ThemeProvider } from '~/provider/ThemeProvider';
-import { store } from '~/store';
 
-import AppRouting from './app/AppRouting';
+import RemoteRouting from './app/RemoteRouting';
 import './index.css';
 
 const App = () => (
   <React.StrictMode>
     <BrowserRouter>
-      <DialogProvider>
-        <Provider store={store}>
-          <ThemeProvider>
-            <AppRouting />
-          </ThemeProvider>
-        </Provider>
-      </DialogProvider>
+      <RemoteRouting />
     </BrowserRouter>
   </React.StrictMode>
 );
