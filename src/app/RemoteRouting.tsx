@@ -4,6 +4,8 @@ import { Route, Routes } from 'react-router-dom';
 import { DialogProvider } from '~/provider/DialogContext';
 import { ThemeProvider } from '~/provider/ThemeProvider';
 import { store } from '~/store';
+import NotFoundScreen from '~/utils/NotFoundScreen';
+import UnauthorizedScreen from '~/utils/UnauthorizedScreen';
 
 import '../index.css';
 import Main from './Main';
@@ -28,6 +30,12 @@ const RemoteRouting: React.FC = () => {
           <Routes>
             <Route path="/home" element={<Main />} />
             <Route path="/test" element={<MicroTestPage />} />
+
+            {/* Ruta para not found page */}
+            <Route path="*" element={<NotFoundScreen />} />
+
+            {/* Ruta de unauthorized */}
+            <Route path="/unauthorized" element={<UnauthorizedScreen />} />
           </Routes>
         </ThemeProvider>
       </DialogProvider>
