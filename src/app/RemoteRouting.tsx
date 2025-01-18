@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
+import { ToastProvider } from '~/provider';
 import { DialogProvider } from '~/provider/DialogContext';
 import { ThemeProvider } from '~/provider/ThemeProvider';
 import { store } from '~/store';
@@ -25,20 +26,22 @@ const RemoteRouting: React.FC = () => {
    */
   return (
     <Provider store={store}>
-      <DialogProvider>
-        <ThemeProvider>
-          <Routes>
-            <Route path="/home" element={<Main />} />
-            <Route path="/test" element={<MicroTestPage />} />
+      <ToastProvider>
+        <DialogProvider>
+          <ThemeProvider>
+            <Routes>
+              <Route path="/home" element={<Main />} />
+              <Route path="/test" element={<MicroTestPage />} />
 
-            {/* Ruta para not found page */}
-            <Route path="*" element={<NotFoundScreen />} />
+              {/* Ruta para not found page */}
+              <Route path="*" element={<NotFoundScreen />} />
 
-            {/* Ruta de unauthorized */}
-            <Route path="/unauthorized" element={<UnauthorizedScreen />} />
-          </Routes>
-        </ThemeProvider>
-      </DialogProvider>
+              {/* Ruta de unauthorized */}
+              <Route path="/unauthorized" element={<UnauthorizedScreen />} />
+            </Routes>
+          </ThemeProvider>
+        </DialogProvider>
+      </ToastProvider>
     </Provider>
   );
 };

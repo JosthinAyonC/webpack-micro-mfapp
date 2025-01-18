@@ -1,6 +1,6 @@
 import React from 'react';
 import ThemeToggle from '~/components/ui/ThemeTogle';
-import { useDialog } from '~/provider/DialogContext';
+import { useDialog } from '~/hooks';
 import { ModalProvider } from '~/provider/ModalProvider';
 
 import { MicroTestDialog } from './dialogs/MicroTestDialog';
