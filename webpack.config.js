@@ -77,7 +77,7 @@ module.exports = (_, argv) => {
 
     plugins: [
       new ModuleFederationPlugin({
-        name: "microapp",
+        name: `${process.env.APP_NAME_SCOPE}`,
         filename: "remoteEntry.js",
         remotes: {
         },
