@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import { store } from '~/store';
 
 import RemoteRouting from './app/RemoteRouting';
 import './index.css';
 
 const App = () => (
   <React.StrictMode>
-    <BrowserRouter>
-      <RemoteRouting />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <RemoteRouting />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 const rootElement = document.getElementById('app');

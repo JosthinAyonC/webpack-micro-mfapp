@@ -1,7 +1,9 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import { RootState, login } from '~/store';
+import { RootState } from '~/store';
+
+import { login } from '../../state/slices/authSlice';
 
 interface MicroTestPageProps {
   label?: string;
