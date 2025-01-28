@@ -19,7 +19,7 @@ const MicroTestPage: React.FC<MicroTestPageProps> = ({ label }) => {
         token: 'hardcoded-token-1234',
         username: 'hardcoded-user',
         roles: ['ADMIN'],
-        exp: 1234567890,
+        exp: 0,
       })
     );
   };
