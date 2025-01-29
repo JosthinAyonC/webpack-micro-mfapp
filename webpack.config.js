@@ -28,6 +28,7 @@ module.exports = (_, argv) => {
       extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
       alias: {
         '~': path.resolve(__dirname, 'src/sasf-commons'),
+        '@': path.resolve(__dirname, 'src'),
       },
     },
 
