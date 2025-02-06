@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dialog } from '~/components/ui/Dialog';
+import { Dialog } from '~/components/ui';
 
 export const MicroTestDialog: React.FC<{ value: string | null; keyId: string }> = ({ keyId, value }) => {
   return (
