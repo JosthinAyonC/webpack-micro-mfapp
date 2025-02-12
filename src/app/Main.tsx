@@ -1,10 +1,10 @@
 import React from 'react';
+import { ThemeToggle } from '~/components/ui';
 import { useDialog } from '~/hooks';
 import { ModalProvider } from '~/provider/ModalProvider';
 
 import { MicroTestDialog } from './dialogs/MicroTestDialog';
 import MicroTestPage from './pages/MicroTestPage';
-import { ThemeToggle } from '~/components/ui';
 
 const Main: React.FC = () => {
   const { openDialog } = useDialog();
